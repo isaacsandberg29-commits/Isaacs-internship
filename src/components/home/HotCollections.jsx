@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import AuthorImage from "../../images/author_thumbnail.jpg";
+import nftImage from "../../images/nftImage.jpg";
 import axios from "axios";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
@@ -11,6 +12,14 @@ const HotCollections = () => {
   const [data, setData] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
 
+  const settings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 4,
+    speed: 500,
+  };
 
   useEffect(() => {
     async function getData() {
@@ -142,6 +151,5 @@ const HotCollections = () => {
     </section>
   );
 };
-
 
 export default HotCollections;
