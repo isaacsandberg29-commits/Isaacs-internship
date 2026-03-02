@@ -111,15 +111,17 @@ const NewItems = () => {
                             <button>Buy Now</button>
                             <div className="nft__item_share">
                               <h4>Share</h4>
-                              <a href="#!" target="_blank" rel="noreferrer">
-                                <i className="fa fa-facebook fa-lg"></i>
-                              </a>
-                              <a href="#!" target="_blank" rel="noreferrer">
-                                <i className="fa fa-twitter fa-lg"></i>
-                              </a>
-                              <a href="#!">
-                                <i className="fa fa-envelope fa-lg"></i>
-                              </a>
+                              <button type="button" onClick={handleFacebook} className="social-btn">
+  <i className="fab fa-facebook-f"></i>
+</button>
+
+<button type="button" onClick={handleTwitter} className="social-btn">
+  <i className="fab fa-twitter"></i>
+</button>
+
+<button type="button" onClick={handleInstagram} className="social-btn">
+  <i className="fab fa-instagram"></i>
+</button>
                             </div>
                           </div>
                         </div>
