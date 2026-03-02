@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import Countdown from "./Countdown"; 
+import Countdown from "./Countdown"; // Adjust the import based on your file structure
 import Skeleton from "../UI/Skeleton";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
@@ -21,7 +21,7 @@ const NewItems = () => {
       setLoading(false);
     }
     getData();
-    
+    console.log(data);
   }, []);
 
   return (
@@ -111,17 +111,15 @@ const NewItems = () => {
                             <button>Buy Now</button>
                             <div className="nft__item_share">
                               <h4>Share</h4>
-                              <button type="button" onClick={handleFacebook} className="social-btn">
-  <i className="fab fa-facebook-f"></i>
-</button>
-
-<button type="button" onClick={handleTwitter} className="social-btn">
-  <i className="fab fa-twitter"></i>
-</button>
-
-<button type="button" onClick={handleInstagram} className="social-btn">
-  <i className="fab fa-instagram"></i>
-</button>
+                              <a href="" target="_blank" rel="noreferrer">
+                                <i className="fa fa-facebook fa-lg"></i>
+                              </a>
+                              <a href="" target="_blank" rel="noreferrer">
+                                <i className="fa fa-twitter fa-lg"></i>
+                              </a>
+                              <a href="">
+                                <i className="fa fa-envelope fa-lg"></i>
+                              </a>
                             </div>
                           </div>
                         </div>
